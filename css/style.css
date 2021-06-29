@@ -1,0 +1,387 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+body.dark-mode {
+  color: white;
+  background-color: #202c37 !important;
+  box-shadow: 0 0 3px 2px #2b3945;
+}
+
+.root > * {
+  position: relative;
+}
+
+.root > *.dark-mode {
+  color: white;
+  background-color: #202c37 !important;
+  box-shadow: 0 0 3px 2px #2b3945;
+}
+
+.main {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  /* padding-right: 15px; */
+  /* padding-left: 15px; */
+  /* margin-right: auto; */
+  /* margin-left: auto; */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: inset 15px 15px 0 0 red;
+}
+
+.nav-parent {
+  background: #fff;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 5px 2px #ccc;
+  margin-bottom: 20px;
+}
+
+.nav-parent .content {
+  display: flex;
+}
+
+.nav-parent .left-nav h2 {
+  font-size: 23px;
+}
+
+.nav-parent .right-nav {
+  margin-left: auto;
+  display: flex;
+  padding-top: 5px;
+  gap: 5px;
+}
+
+.nav-parent .right-nav p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.find {
+  margin-top: 20px;
+  height: 40px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 20;
+}
+
+.find .content {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .find .content {
+    flex-direction: column;
+  }
+}
+
+.find .form-control {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.find .form-control .search-input {
+  border: none;
+  outline: none;
+  width: 320px;
+  height: 35px;
+  padding-left: 30px;
+  box-shadow: 0 0 3px 2px #ccc;
+}
+
+.find .form-control svg {
+  width: 15px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+
+.find .filter {
+  margin-left: auto;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .find .filter {
+    margin-left: 0;
+  }
+}
+
+.find .btn-filter {
+  background: #fff;
+  border: none;
+  outline: none;
+  width: 130px;
+  height: 35px;
+  box-shadow: 0 0 3px 2px #ccc;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.find button {
+  cursor: pointer;
+  text-align: left;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.find .filter-group {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 0 3px 2px #ccc;
+  width: 100%;
+  display: none;
+}
+
+.find .filter-group.show-group {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .find .filter-group {
+    width: 130px;
+  }
+}
+
+.find .filter-group .filter-btns {
+  border: none;
+  outline: none;
+  display: block;
+  background: #fff;
+}
+
+.country-gallary {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+.country-gallary .country-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 300px));
+  grid-template-rows: auto;
+  gap: 30px;
+  place-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .country-gallary .country-grid {
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+  }
+}
+
+@media (max-width: 812px) {
+  .country-gallary .country-grid {
+    grid-template-columns: repeat(2, minmax(200px, 300px));
+  }
+}
+
+@media (max-width: 375px) {
+  .country-gallary .country-grid {
+    grid-template-columns: repeat(1, minmax(200px, 300px));
+  }
+}
+
+.country-gallary .country-item {
+  background: #fff;
+  border-radius: 5px;
+  min-height: 291px;
+  cursor: pointer;
+}
+
+.country-gallary .country-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.country-gallary .country-item .img-controller {
+  margin-bottom: 20px;
+  max-height: 146px;
+  width: 100%;
+}
+
+.country-gallary .country-item .img-controller img {
+  width: 100%;
+  max-height: 146px;
+}
+
+.country-gallary .country-item .country-name {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.country-gallary .country-item .country-text {
+  margin-left: 20px;
+}
+
+.country-gallary .country-item .details-list {
+  padding-bottom: 40px;
+}
+
+.country-gallary .country-item .details-list .list-key {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.country-gallary .country-item .details-list .list-key .list-value {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.country-details {
+  position: relative;
+}
+
+.country-details .gen-btn {
+  border: none;
+  outline: none;
+  background: #ffff;
+  color: #000000;
+  cursor: pointer;
+  text-align: left;
+  padding: 3px 15px 3px 15px;
+  box-shadow: 0 0 3px 2px #ccc;
+  font-weight: 600;
+}
+
+.country-details .gen-btn svg {
+  vertical-align: middle;
+}
+
+.country-details .back-btn-container {
+  margin-bottom: 20px;
+}
+
+.country-details .country-content {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .country-details .country-content {
+    flex-direction: column;
+  }
+}
+
+.country-details .country-content > * {
+  flex: 1 1 50%;
+}
+
+.country-details .country-flag-img {
+  width: 100%;
+}
+
+.country-details .country-flag-img img {
+  width: 100%;
+}
+
+.country-details .country-texts {
+  padding-left: 40px;
+}
+
+@media (max-width: 900px) {
+  .country-details .country-texts {
+    padding-left: 0;
+  }
+}
+
+.country-details .country-texts .country-name {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.country-details .country-texts .country-sub {
+  display: flex;
+  margin-bottom: 20px;
+  row-gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .country-details .country-texts .country-sub {
+    flex-direction: column;
+  }
+}
+
+.country-details .country-texts .country-sub .detail-list {
+  list-style: none;
+  line-height: 20px;
+}
+
+.country-details .country-texts .country-sub .list-item {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.country-details .country-texts .country-sub .list-item .item-details {
+  font-weight: 600;
+}
+
+.country-details .border-countries {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .country-details .border-countries {
+    flex-direction: column;
+  }
+}
+
+.country-details .border-countries .header {
+  font-size: 13px;
+  font-weight: 600;
+  vertical-align: middle;
+  padding-top: 5px;
+}
+
+.country-details .border-countries .btn-group .dsk-gen-btn {
+  font-size: 10px;
+  padding: 3px 10px;
+}

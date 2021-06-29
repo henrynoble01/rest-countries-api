@@ -1,0 +1,146 @@
+ <!-- country 1 -->
+              <!-- <li class="country-item">
+                  <a href="">
+                    <div class="img-controller">
+                      <img src="./images/country.svg" alt="" />
+                    </div>
+                    <div class="country-text">
+                      <h5 class="country-name">NIGERIA</h5>
+                      <div class="details-list">
+                        <p class="list-key">
+                          Population: <span class="list-value"> 81,8181818</span>
+                        </p>
+                        <p class="list-key">
+                          Population: <span class="list-value"> 81,8181818</span>
+                        </p>
+                        <p class="list-key">
+                          Population: <span class="list-value"> 81,8181818</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li> -->
+
+
+ <!-- <input
+                type="text"
+                placeholder=" Search for a country"
+                name=""
+                title="Type in a country region or capital"
+                id=""
+              /> -->
+
+            <!-- <select name="" id="" class="filter">
+                <option value="" selected hidden>Filter by Region</option>
+                <option class="filter-btns" value="africa">Africa</option>
+                <option class="filter-btns" value="americas">America</option>
+                <option class="filter-btns" value="asia">Asia</option>
+                <option class="filter-btns" value="europe">Europe</option>
+                <option class="filter-btns" value="oceania">Oceania</option>
+              </select> -->
+
+
+  <!-- <button data-region="all" type="button" class="filter-btns">
+                    All
+                  </button>
+                  <button data-region="Africa" type="button" class="filter-btns">
+                    Africa
+                  </button>
+                  <button data-region="Americas" type="button" class="filter-btns">
+                    America
+                  </button>
+                  <button data-region="Asia" type="button" class="filter-btns">
+                    Asia
+                  </button>
+                  <button data-region="Europe" type="button" class="filter-btns">
+                    Europe
+                  </button>
+                  <button data-region="Oceania" type="button" class="filter-btns">
+                    Oceania
+                  </button> -->
+
+
+
+
+
+
+
+
+
+
+
+this id the single country view
+     <!-- <main class="country-details container">
+        <div class="back-btn-container">
+          <button class="gen-btn back-btn">
+            <svg
+              height="20px"
+              id="Layer_1"
+              style="enable-background: new 0 0 512 512"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="20px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <path
+                d="M189.3,128.4L89,233.4c-6,5.8-9,13.7-9,22.4c0,8.7,3,16.5,9,22.4l100.3,105.4c11.9,12.5,31.3,12.5,43.2,0  c11.9-12.5,11.9-32.7,0-45.2L184.4,288h217c16.9,0,30.6-14.3,30.6-32c0-17.7-13.7-32-30.6-32h-217l48.2-50.4  c11.9-12.5,11.9-32.7,0-45.2C220.6,115.9,201.3,115.9,189.3,128.4z"
+              />
+            </svg>
+            Back
+          </button>
+        </div>
+
+        <section class="country-content">
+          <div class="country-flag-img">
+            <img src="./images/country.svg" alt="" />
+          </div>
+
+          <div class="country-texts">
+            <h2 class="country-name">Balgium</h2>
+
+            <div class="country-sub">
+              <ul class="detail-list">
+                <li class="list-item">
+                  Native Name: <span class="item-details"> Belgie </span>
+                </li>
+                <li class="list-item">
+                  Population: <span class="item-details"> 11,319,551 </span>
+                </li>
+                <li class="list-item">
+                  Region: <span class="item-details"> Europe </span>
+                </li>
+                <li class="list-item">
+                  Sub Region:
+                  <span class="item-details"> Western Europe </span>
+                </li>
+                <li class="list-item">
+                  Capital: <span class="item-details"> Brussels </span>
+                </li>
+              </ul>
+
+              <ul class="detail-list">
+                <li class="list-item">
+                  Top Level Domain: <span class="item-details"> Be </span>
+                </li>
+                <li class="list-item">
+                  Currencies: <span class="item-details"> Euro </span>
+                </li>
+                <li class="list-item">
+                  Languages:
+                  <span class="item-details"> Dutch, French, German </span>
+                </li>
+              </ul>
+            </div>
+            <div class="border-countries">
+              <p class="header">Border Countries:</p>
+              <div class="btn-group">
+                <button class="gen-btn dsk-gen-btn">France</button>
+                <button class="gen-btn dsk-gen-btn">Germany</button>
+                <button class="gen-btn dsk-gen-btn">Netherland</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main> -->
