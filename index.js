@@ -12,8 +12,6 @@ let countryDetails = document.querySelector('.country-details')
 
 
 
-
-    
 // this is for showing the dropdown item
 btnDrop.addEventListener('click', (e) => {
     filterGroup.classList.toggle('show-group')
@@ -31,11 +29,12 @@ window.addEventListener('load',  ()=> {
         fetchCountries()
         createCountryItem(response_deserialized)
     }
-    
     addFilterBtns(switchDisplayItems )
     searchCountry(switchDisplayItems)
     switchDisplayItems()
+    // borderLookup();
 })
+
 
 // craete filter array
 function createFilterBtns() {
@@ -239,7 +238,8 @@ function createSingleCountryItem (object) {
                 </li>
                 <li class="list-item">
                   Languages:
-                  <span class="item-details"> ${item.languages} </span>
+                  <span class="item-details"> ${item.languages[0].name}
+                   </span>
                 </li>
               </ul>
             </div>
@@ -261,13 +261,36 @@ function createSingleCountryItem (object) {
     // root.appendChild(singleCountry)
 }
 
+// borderLookup
 
 
+
+function borderLookup(param) {
+    let borderList = {};
+    response_deserialized.forEach((item) => {
+        borderList[item.alpha3Code] = item.name;
+    });
+    // console.log(Object.keys(borderList).length );
+    // console.log(borderList);
+    // let arrblist  = param
+    // debugger
+     let matchBorder =  param.map((item)=> {
+        //  console.log(item);
+         item.borders.forEach((e)=> {
+             console.log(e);
+            if (e == borderList[e]){
+                console.log(borderList['PAK']);
+            }
+        })
+    })
+    return matchBorder;
+}
+// console.log(borderLookup() );
+// borderLookup();
 
 function switchDisplayItems() {
     let listItem = document.querySelectorAll('.country-item')
     listItem.forEach(item => {
-        // let countryData = item.dataset.name
         item.addEventListener('click', (e)=>{
             let countryData =  e.currentTarget.dataset.name ;
             // console.log(e);
@@ -279,7 +302,8 @@ function switchDisplayItems() {
             console.log( filterCountry );
             main.style.display = 'none'
             countryDetails.style.display = 'block'
-            createSingleCountryItem (filterCountry)
+            createSingleCountryItem(filterCountry)
+            borderLookup( filterCountry );
             showCountryGrid()
         })
     })

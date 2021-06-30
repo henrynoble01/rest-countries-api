@@ -227,3 +227,23 @@ function createCountryItem(params) {
 //     console.log( searchValue);
 // }
 // searchCountry()
+
+
+// function border(){
+//     for (let i = 0; i < response_deserialized.length; i++) {
+//         const element = response_deserialized[i];
+
+//         for (let j = 0; j < element.borders.length; j++) {
+//             const bord = element.borders[j];
+//             // console.log(bord);
+            
+//             let regionFilter = response_deserialized.filter(function(item) {
+//                 if (item.alpha3Code == bord) {
+//                     console.log(item.name);
+//                     return item;
+//                 }
+//             })
+//         }
+//     }
+// }
+// border()
