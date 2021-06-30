@@ -21,6 +21,7 @@ btnDrop.addEventListener('click', (e) => {
 let response_deserialized = JSON.parse(localStorage.getItem('country'))
 // load items
 window.addEventListener('load',  ()=> {
+    // loadingSpinner.className += ' hidden'
     loadingSpinner.classList.add('hidden')
     if ( localStorage.getItem('country') ){
         console.log("this item is in the localStorage so i did not fetch the data ");
@@ -102,11 +103,17 @@ function addFilterBtns(  functionParam ) {
 
 
 async function fetchCountries() {
-    let request = await fetch('https://restcountries.eu/rest/v2/all')
-    debugger
-    let response = await request.json()
-    let response_serialized = JSON.stringify(response);
-    localStorage.setItem('country', response_serialized)
+    try {
+        // let request = await fetch('https://restcountries.eu/rest')
+        let request = await fetch('https://restcountries.eu/rest/v2/all')
+        // debugger
+        let response = await request.json()
+        let response_serialized = JSON.stringify(response);
+        return localStorage.setItem('country', response_serialized)
+    } catch (error) {
+        console.log('Api is invalid');
+        console.log(error);
+    }
 }
 
 function hello() {
@@ -247,9 +254,7 @@ function createSingleCountryItem (object) {
             <div class="border-countries">
               <p class="header">Border Countries:</p>
               <div class="btn-group">
-                <button class="gen-btn dsk-gen-btn">France</button>
-                <button class="gen-btn dsk-gen-btn">Germany</button>
-                <button class="gen-btn dsk-gen-btn">Netherland</button>
+                
               </div>
             </div>
           </div>
@@ -271,23 +276,19 @@ function borderLookup(param) {
     response_deserialized.forEach((item) => {
         borderList[item.alpha3Code] = item.name;
     });
+    let arr = []
     // console.log(Object.keys(borderList).length );
-    // console.log(borderList);
-    // let arrblist  = param
-    // debugger
-     let matchBorder =  param.map((item)=> {
-        //  console.log(item);
-         item.borders.forEach((e)=> {
-             console.log(e);
-            if (e == borderList[e]){
-                console.log(borderList['PAK']);
-            }
+    let matchBorder =  param.map((item)=> {
+        //  console.log(item.borders);
+        item.borders.forEach((e)=> {
+            arr.push(borderList[e])
+            // console.log(borderList[e]);
         })
     })
-    return matchBorder;
+    // console.log(arr);
+    // debugger
+    return arr;
 }
-// console.log(borderLookup() );
-// borderLookup();
 
 function switchDisplayItems() {
     let listItem = document.querySelectorAll('.country-item')
@@ -304,14 +305,22 @@ function switchDisplayItems() {
             main.style.display = 'none'
             countryDetails.style.display = 'block'
             createSingleCountryItem(filterCountry)
-            borderLookup( filterCountry );
-            showCountryGrid()
+            goBack()
+            function displayBorder() {
+                let borderCountries = borderLookup(filterCountry).map(border => {
+                    return ` <button data-border="${border}" class="gen-btn dsk-gen-btn"> ${border} </button>  `
+                }).join('')
+                // console.log(borderCountries);
+                let borderGroup = document.querySelector('.btn-group')
+                borderGroup.innerHTML = borderCountries
+            }
+            displayBorder()
         })
     })
     // console.log(listItem);
 }
 
-function showCountryGrid() {
+function goBack() {
     let backBtn = document.querySelector('.back-btn');
     backBtn.addEventListener('click', ()=> {
         countryDetails.style.display = 'none'

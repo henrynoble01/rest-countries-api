@@ -144,3 +144,8 @@ this id the single country view
           </div>
         </section>
       </main> -->
+
+
+<button class="gen-btn dsk-gen-btn">France</button>
+                <button class="gen-btn dsk-gen-btn">Germany</button>
+                <button class="gen-btn dsk-gen-btn">Netherland</button>
