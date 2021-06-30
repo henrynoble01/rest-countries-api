@@ -308,7 +308,7 @@ function switchDisplayItems() {
             goBack()
             function displayBorder() {
                 let borderCountries = borderLookup(filterCountry).map(border => {
-                    return ` <button data-border="${border}" class="gen-btn dsk-gen-btn"> ${border} </button>  `
+                    return `<button data-border="${border}" class="gen-btn dsk-gen-btn"> ${border} </button> `
                 }).join('')
                 // console.log(borderCountries);
                 let borderGroup = document.querySelector('.btn-group')
