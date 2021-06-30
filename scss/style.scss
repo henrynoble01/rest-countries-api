@@ -90,6 +90,31 @@ body {
   }
 }
 
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $bg-white;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.hidden {
+    animation: fadeout 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 // body {
 //   background: blue;
 // }

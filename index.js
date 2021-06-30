@@ -5,7 +5,7 @@ let filterGroup = document.querySelector('.filter-group')
 let root = document.querySelector('.root')
 let main = document.querySelector('.main')
 let countryDetails = document.querySelector('.country-details')
-
+let loadingSpinner = document.querySelector('.loading-spinner')
 // console.log(root);
 // console.log(listItem);
 
@@ -21,6 +21,7 @@ btnDrop.addEventListener('click', (e) => {
 let response_deserialized = JSON.parse(localStorage.getItem('country'))
 // load items
 window.addEventListener('load',  ()=> {
+    loadingSpinner.classList.add('hidden')
     if ( localStorage.getItem('country') ){
         console.log("this item is in the localStorage so i did not fetch the data ");
         createCountryItem(response_deserialized)
