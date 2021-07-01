@@ -17,25 +17,25 @@ btnDrop.addEventListener('click', (e) => {
     filterGroup.classList.toggle('show-group')
 })
 
-// convert the local srorage string to  JSON format
 let response_deserialized = JSON.parse(localStorage.getItem('country'))
+// convert the local srorage string to  JSON format
 // load items
 window.addEventListener('load',  ()=> {
-    // loadingSpinner.className += ' hidden'
-    loadingSpinner.classList.add('hidden')
+  // loadingSpinner.className += ' hidden'
+  loadingSpinner.classList.add('hidden')
     if ( localStorage.getItem('country') ){
-        console.log("this item is in the localStorage so i did not fetch the data ");
-        createCountryItem(response_deserialized)
+      console.log("this item is in the localStorage so i did not fetch the data ");
+      createCountryItem(response_deserialized)
     }else{
-        console.log('this item in not in the localStorage so i fetched the data ');
-        fetchCountries()
-        createCountryItem(response_deserialized)
-    }
-    addFilterBtns(switchDisplayItems )
+      console.log('this item in not in the localStorage so i fetched the data ');
+      fetchCountries()
+      createCountryItem(response_deserialized)
+      }
+    addFilterBtns(switchDisplayItems)
     searchCountry(switchDisplayItems)
     switchDisplayItems()
     // borderLookup();
-})
+  })
 
 
 // craete filter array
